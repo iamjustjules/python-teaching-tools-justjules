@@ -1,0 +1,116 @@
+### Homework Assignment: An Array of Sequences
+
+**Objective**: To understand and apply the concepts covered in Chapter 2 of "Fluent Python" on sequences. This includes working with various types of sequences, comprehensions, slicing, and more.
+
+#### Instructions:
+Complete the following tasks and questions. Provide code examples and explanations where necessary.
+
+### Part 1: Overview of Built-In Sequences
+
+1. **Task**: Create a list of your favorite fruits and print the list. Then, access and print the second and fourth items from the list.
+
+    ```python
+    fruits = ['apple', 'banana', 'cherry', 'date', 'fig']
+    print(fruits)
+    print(fruits[1])  # Second item
+    print(fruits[3])  # Fourth item
+    ```
+
+### Part 2: List Comprehensions and Generator Expressions
+
+2. **Task**: Use a list comprehension to create a list of the squares of numbers from 1 to 10. Print the resulting list.
+
+    ```python
+    squares = [x**2 for x in range(1, 11)]
+    print(squares)
+    ```
+
+3. **Task**: Create a generator expression to generate the squares of numbers from 1 to 10. Iterate through the generator and print each square.
+
+    ```python
+    squares_gen = (x**2 for x in range(1, 11))
+    for square in squares_gen:
+        print(square)
+    ```
+
+### Part 3: Listcomps Versus map and filter
+
+4. **Task**: Use a list comprehension to filter out all numbers greater than 5 from a list of numbers from 1 to 10. Print the resulting list. Then, achieve the same result using `filter` and `lambda`.
+
+    ```python
+    numbers = list(range(1, 11))
+    filtered_numbers = [x for x in numbers if x > 5]
+    print(filtered_numbers)
+
+    filtered_numbers_with_filter = list(filter(lambda x: x > 5, numbers))
+    print(filtered_numbers_with_filter)
+    ```
+
+### Part 4: Cartesian Products
+
+5. **Task**: Create a list comprehension that generates all possible combinations of colors and sizes. Use colors `['red', 'blue']` and sizes `['S', 'M', 'L']`. Print the resulting list of tuples.
+
+    ```python
+    colors = ['red', 'blue']
+    sizes = ['S', 'M', 'L']
+    combinations = [(color, size) for color in colors for size in sizes]
+    print(combinations)
+    ```
+
+### Part 5: Tuples as Records
+
+6. **Task**: Create a tuple to represent the coordinates (latitude, longitude) of your favorite place. Unpack the tuple into two separate variables and print them.
+
+    ```python
+    coordinates = (40.7128, -74.0060)  # Example: New York City
+    latitude, longitude = coordinates
+    print(f"Latitude: {latitude}, Longitude: {longitude}")
+    ```
+
+### Part 6: Slicing
+
+7. **Task**: Create a list of the first 10 letters of the alphabet. Slice the list to get the first 5 letters and the last 5 letters. Print both slices.
+
+    ```python
+    import string
+    alphabet = list(string.ascii_lowercase[:10])
+    first_half = alphabet[:5]
+    second_half = alphabet[5:]
+    print(first_half)
+    print(second_half)
+    ```
+
+### Part 7: Using + and * with Sequences
+
+8. **Task**: Create a list and use the `*` operator to repeat its elements 3 times. Then use the `+` operator to concatenate it with another list. Print the resulting lists.
+
+    ```python
+    list1 = [1, 2, 3]
+    repeated_list = list1 * 3
+    print(repeated_list)
+
+    list2 = [4, 5, 6]
+    concatenated_list = list1 + list2
+    print(concatenated_list)
+    ```
+
+### Part 8: Deques
+
+9. **Task**: Create a deque with numbers from 0 to 9. Perform the following operations: rotate the deque by 3, append an element to the left, and extend the deque with another list of numbers. Print the deque after each operation.
+
+    ```python
+    from collections import deque
+
+    dq = deque(range(10))
+    print(dq)
+    dq.rotate(3)
+    print(dq)
+    dq.appendleft(-1)
+    print(dq)
+    dq.extend([10, 11, 12])
+    print(dq)
+    ```
+
+### Submission:
+
+Submit your Python scripts for each task in a single file named `array_of_sequences_homework.py`. Include comments in your code to explain your thought process. Ensure your code is well-formatted and easy to read.
