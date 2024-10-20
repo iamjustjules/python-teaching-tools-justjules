@@ -1,0 +1,12 @@
+provide detailed AND concise notes, with relevant code and examples, including explanations as to how this works and what other areas of python this works with. include any specific exercises and the exercise's solution from the following simple enough for a teenager to understand:
+
+
+
+
+
+Provide the exercises from this chapter and explanations as to how they work
+
+
+Please provide a detailed summary as to how this ties together with earlier chapters of Fluent Python, how to be a better python developer, it professional, and devops professional
+
+Please provide a detailed summary as to how this ties together with earlier chapters of Python Crash Course, how to be a better python developer, it professional, and devops professional
